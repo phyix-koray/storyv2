@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 38 30% 98%;
+    --foreground: 220 20% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 16%;
+
+    /* Primary: warm coral-orange from the logo */
+    --primary: 18 85% 56%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 30% 95%;
+    --secondary-foreground: 20 30% 30%;
+
+    --muted: 30 20% 95%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 200 80% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 20% 90%;
+    --input: 30 20% 88%;
+    --ring: 18 85% 56%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 30 25% 97%;
+    --sidebar-foreground: 220 20% 22%;
+    --sidebar-primary: 18 85% 56%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 30 30% 93%;
+    --sidebar-accent-foreground: 220 20% 22%;
+    --sidebar-border: 30 20% 90%;
+    --sidebar-ring: 18 85% 56%;
+
+    /* Brand palette tokens */
+    --brand-coral: 10 85% 58%;
+    --brand-orange: 28 92% 56%;
+    --brand-gold: 40 90% 58%;
+    --brand-blue: 220 80% 55%;
+    --brand-purple: 270 72% 52%;
+  }
+
+  .dark {
+    --background: 220 20% 7%;
+    --foreground: 30 14% 95%;
+
+    --card: 220 20% 10%;
+    --card-foreground: 30 14% 95%;
+
+    --popover: 220 20% 10%;
+    --popover-foreground: 30 14% 95%;
+
+    --primary: 18 82% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 16% 16%;
+    --secondary-foreground: 30 14% 92%;
+
+    --muted: 220 14% 16%;
+    --muted-foreground: 220 8% 65%;
+
+    --accent: 200 78% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 14% 22%;
+    --input: 220 14% 22%;
+    --ring: 18 82% 58%;
+
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 30 14% 92%;
+    --sidebar-primary: 18 82% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 18%;
+    --sidebar-accent-foreground: 30 14% 92%;
+    --sidebar-border: 220 14% 20%;
+    --sidebar-ring: 18 82% 58%;
+
+    --brand-coral: 10 85% 62%;
+    --brand-orange: 28 90% 60%;
+    --brand-gold: 40 88% 62%;
+    --brand-blue: 220 78% 60%;
+    --brand-purple: 270 70% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(1200px 500px at 10% -8%, hsl(var(--brand-coral) / 0.06), transparent 60%),
+      radial-gradient(900px 400px at 90% -5%, hsl(var(--brand-gold) / 0.05), transparent 55%),
+      linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary) / 0.3));
+    background-attachment: fixed;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .modern-shell {
+    @apply bg-background/65 backdrop-blur-sm border border-border/60 shadow-lg;
+  }
+
+  .modern-surface {
+    @apply bg-card/85 backdrop-blur-md border border-border/70 shadow-md;
+  }
+
+  .brand-gradient-text {
+    background: linear-gradient(135deg,
+      hsl(var(--brand-coral)),
+      hsl(var(--brand-orange)),
+      hsl(var(--brand-gold)),
+      hsl(var(--brand-blue)),
+      hsl(var(--brand-purple))
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .brand-gradient-bg {
+    background: linear-gradient(135deg,
+      hsl(var(--brand-coral)),
+      hsl(var(--brand-orange)),
+      hsl(var(--brand-gold)),
+      hsl(var(--brand-blue)),
+      hsl(var(--brand-purple))
+    );
+  }
+
+  .brand-gradient-border {
+    border-image: linear-gradient(135deg,
+      hsl(var(--brand-coral)),
+      hsl(var(--brand-orange)),
+      hsl(var(--brand-purple))
+    ) 1;
+  }
+
+  .playful-shadow {
+    box-shadow:
+      0 4px 14px -3px hsl(var(--brand-coral) / 0.12),
+      0 8px 20px -6px hsl(var(--brand-orange) / 0.08);
+  }
+}
