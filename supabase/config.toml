@@ -1,0 +1,37 @@
+project_id = "ehdiiyihdxqgpzuqslxa"
+
+[functions.generate-story-draft]
+verify_jwt = false
+
+[functions.generate-images]
+verify_jwt = false
+
+[functions.generate-character-avatars]
+verify_jwt = false
+
+[functions.analyze-single-frame]
+verify_jwt = false
+
+[functions.generate-lip-sync-frames]
+verify_jwt = false
+
+[functions.generate-ai-video]
+verify_jwt = false
+
+[functions.elevenlabs-tts]
+verify_jwt = false
+
+[functions.elevenlabs-voices]
+verify_jwt = false
+
+[functions.search-music]
+verify_jwt = false
+
+[functions.generate-story-suggestions]
+verify_jwt = false
+
+[functions.admin-list-users]
+verify_jwt = false
+
+[functions.generate-music]
+verify_jwt = false

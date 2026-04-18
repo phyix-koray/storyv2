@@ -1,0 +1,1 @@
+ALTER TABLE public.story_projects ADD COLUMN story_mode text DEFAULT 'multi';

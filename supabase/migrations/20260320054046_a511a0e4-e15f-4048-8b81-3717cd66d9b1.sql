@@ -1,0 +1,1 @@
+ALTER TABLE public.project_frames ADD COLUMN IF NOT EXISTS narration text;
